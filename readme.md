@@ -26,7 +26,7 @@ The full-website-id should reflect the name of the image you create in each of t
 Custom Icons
 ------------
 
-Custom icons are easy to add. To enable them, select "Custom" from the Icon Type dropdown in the widget settings. In the directory of your active theme, create a folder titled `social_icons`. Add your icons in .gif, .jpg, .jpeg, or .png format, using the name of the ID in the $social_accounts array (details above).
+Custom icons are easy to add. To enable them, select "Custom" from the Icon Type dropdown in the widget settings. In the directory of your active theme, create a folder titled `social_icons`. Within that directory, add folders titled `small`, `medium`, and `large` for each icon size you wish to use. Add your icons in .gif, .jpg, .jpeg, or .png format, using the name of the ID in the $social_accounts array (details above).
 
 Icons
 -----
