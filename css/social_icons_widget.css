@@ -1,6 +1,8 @@
 .social-icons-widget ul {
 	float:left;
-	margin-bottom:15px;
+	list-style-type:none;
+	margin:0 0 15px;
+	width:100%;
 }
 
 .social-icons-widget ul li {
