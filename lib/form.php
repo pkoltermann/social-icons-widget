@@ -25,7 +25,9 @@ $sizes = array(
 	'Small (16px)' => 'small',
 	'Medium (32px)' => 'medium',
 	'Large (64px)' => 'large',
-	'Custom' => 'custom'
+	'Custom (Small)' => 'custom_small',
+	'Custom (Medium)' => 'custom_medium',
+	'Custom (Large)' => 'custom_large'
 );
 ?>
 

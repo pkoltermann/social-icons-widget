@@ -25,19 +25,26 @@ $ul_class .= 'icons-'.$icons;
 <ul class="<?php echo $ul_class; ?>">
 <?php foreach($social_accounts as $title => $id) : ?>
 	<?php if($instance[$id] != '' && $instance[$id] != 'http://') :
-
-		if ($icons != 'custom') { $icon_path = ABSPATH .'wp-content/plugins/social_icons_widget/icons/'.$icons.'/'.$id.'.{gif,jpg,jpeg,png}'; }
-		else { $icon_path = STYLESHEETPATH .'/social_icons/'.$id.'.{gif,jpg,jpeg,png}'; }
-
+		
+		$custom_sizes = array('custom_small','custom_medium','custom_large');
+		
+		if (in_array($icons, $custom_sizes)) {
+			$size = str_replace("custom_","",$icons);
+			$icon_path = STYLESHEETPATH .'/social_icons/'.$size.'/'.$id.'.{gif,jpg,jpeg,png}';
+		}
+		else {
+			$icon_path = ABSPATH .'wp-content/plugins/social_icons_widget/icons/'.$icons.'/'.$id.'.{gif,jpg,jpeg,png}';			
+		}
+		
 		$result = glob( $icon_path, GLOB_BRACE );
 
-		if($icons != 'custom') {
-			$path = explode('plugins', $result[0]);
-			$icon = get_bloginfo('url').'/wp-content/plugins'.$path[1];
-		}
-		else {	
+		if (in_array($icons, $custom_sizes)) {
 			$path = explode('themes', $result[0]);
 			$icon = get_bloginfo('url').'/wp-content/themes'.$path[1];
+		}
+		else {
+			$path = explode('plugins', $result[0]);
+			$icon = get_bloginfo('url').'/wp-content/plugins'.$path[1];
 		}
 
 		if ( @getimagesize($icon) ) { $image = '<img class="site-icon" src="'.$icon.'" alt="'.$title.'" title="'.$title.'" />'; }
