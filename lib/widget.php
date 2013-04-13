@@ -26,8 +26,19 @@ $ul_class .= 'icons-'.$icons;
 <?php foreach($social_accounts as $title => $id) : ?>
 	<?php if($instance[$id] != '' && $instance[$id] != 'http://') :
 
-		if ($icons != 'custom') { $icon = plugins_url('social_icons_widget/icons/'.$icons.'/'.$id.'.jpg', ''); }
-		else { $icon = get_bloginfo('stylesheet_directory').'/social_icons/'.$id.'.jpg'; }
+		if ($icons != 'custom') { $icon_path = ABSPATH .'wp-content/plugins/social_icons_widget/icons/'.$icons.'/'.$id.'.{gif,jpg,jpeg,png}'; }
+		else { $icon_path = STYLESHEETPATH .'/social_icons/'.$id.'.{gif,jpg,jpeg,png}'; }
+
+		$result = glob( $icon_path, GLOB_BRACE );
+
+		if($icons != 'custom') {
+			$path = explode('plugins', $result[0]);
+			$icon = get_bloginfo('url').'/wp-content/plugins'.$path[1];
+		}
+		else {	
+			$path = explode('themes', $result[0]);
+			$icon = get_bloginfo('url').'/wp-content/themes'.$path[1];
+		}
 
 		if ( @getimagesize($icon) ) { $image = '<img class="site-icon" src="'.$icon.'" alt="'.$title.'" title="'.$title.'" />'; }
 		else { $image = ''; }

@@ -21,12 +21,12 @@ The structure of the array follows a simple format:
 
 `'Full Website Name' => 'full-website-id'`
 
-The full-website-id should reflect the name of the .jpg image you create in each of the icon folder sizes, or in your custom icon directory. It is also used to populate the class field of the icon when the widget displays.
+The full-website-id should reflect the name of the image you create in each of the icon folder sizes, or in your custom icon directory. It is also used to populate the class field of the icon when the widget displays. The Social Icon Widget looks for .gif, .jpg, .jpeg, and .png in order and returns the first extention it finds.
 
 Custom Icons
 ------------
 
-Custom icons are easy to add. To enable them, select "Custom" from the Icon Type dropdown in the widget settings. In the directory of your active theme, create a folder titled "social_icons". Add your icons in .jpg format, using the name of the ID in the $social_accounts array (details above).
+Custom icons are easy to add. To enable them, select "Custom" from the Icon Type dropdown in the widget settings. In the directory of your active theme, create a folder titled `social_icons`. Add your icons in .gif, .jpg, .jpeg, or .png format, using the name of the ID in the $social_accounts array (details above).
 
 Icons
 -----
