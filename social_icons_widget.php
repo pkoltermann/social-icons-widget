@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Social Icons Widget
-Plugin URI: http://example.com/
+Plugin URI: http://github.com/dannisbet/Social-Icons-Widget
 Version: 2013.04
 Description: Displays a list of social media website icons and a link to your profile.
 Author: Dan Nisbet
