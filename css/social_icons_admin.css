@@ -9,6 +9,34 @@
 	margin-bottom:5px;
 }
 
+.social_icons_widget .social_accounts label {
+	background-repeat:no-repeat;
+	padding-left:20px;
+}
+
+/* Icons for admin widget */
+.social_icons_widget .behance { background-image:url('../icons/small/behance.jpg'); }
+.social_icons_widget .dribbble { background-image:url('../icons/small/dribbble.jpg'); }
+.social_icons_widget .facebook { background-image:url('../icons/small/facebook.png'); }
+.social_icons_widget .flickr { background-image:url('../icons/small/flickr.jpg'); }
+.social_icons_widget .forrst { background-image:url('../icons/small/forrst.jpg'); }
+.social_icons_widget .foursquare { background-image:url('../icons/small/foursquare.jpg'); }
+.social_icons_widget .googleplus { background-image:url('../icons/small/googleplus.jpg'); }
+.social_icons_widget .instagram { background-image:url('../icons/small/instagram.jpg'); }
+.social_icons_widget .klout { background-image:url('../icons/small/klout.jpg'); }
+.social_icons_widget .linkedin { background-image:url('../icons/small/linkedin.jpg'); }
+.social_icons_widget .path { background-image:url('../icons/small/path.jpg'); }
+.social_icons_widget .pinterest { background-image:url('../icons/small/pinterest.jpg'); }
+.social_icons_widget .rss { background-image:url('../icons/small/rss.jpg'); }
+.social_icons_widget .stumbleupon { background-image:url('../icons/small/stumbleupon.jpg'); }
+.social_icons_widget .technorati { background-image:url('../icons/small/technorati.jpg'); }
+.social_icons_widget .tumblr { background-image:url('../icons/small/tumblr.jpg'); }
+.social_icons_widget .twitter { background-image:url('../icons/small/twitter.jpg'); }
+.social_icons_widget .vimeo { background-image:url('../icons/small/vimeo.jpg'); }
+.social_icons_widget .yelp { background-image:url('../icons/small/yelp.jpg'); }
+.social_icons_widget .youtube { background-image:url('../icons/small/youtube.jpg'); }
+.social_icons_widget .zerply { background-image:url('../icons/small/zerply.jpg'); }
+
 .social_icons_widget .icon_options label,
 .social_icons_widget .label_options label {
 	display:inline;

@@ -17,7 +17,7 @@ $data['labels'] = $instance['labels'];
 <div class="social_icons_widget">
 
 <p><label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
-<input class="widefat" type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo attribute_escape($data['title']); ?>" /></p>
+<input class="widefat" type="text" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo esc_attr($data['title']); ?>" /></p>
 
 <?php
 $sizes = array(
@@ -36,7 +36,7 @@ $sizes = array(
 	<?php
 	foreach($sizes as $option => $value) :
 
-		if(attribute_escape($data['icons'] == $value)) { $selected = ' selected="selected"'; }
+		if(esc_attr($data['icons'] == $value)) { $selected = ' selected="selected"'; }
 		else { $selected = ''; }
 	?>
 	
@@ -46,17 +46,13 @@ $sizes = array(
 	</select>
 </p>
 
-<?php if(attribute_escape($data['labels'] == 'show')) { $checked = ' checked="checked"'; } ?>
+<?php if(esc_attr($data['labels'] == 'show')) { $checked = ' checked="checked"'; } else { $checked = ''; } ?>
 <p class="label_options"><input type="checkbox" id="<?php echo $this->get_field_id('labels'); ?>" name="<?php echo $this->get_field_name('labels'); ?>" value="show"<?php echo $checked; ?> /> <label for="<?php echo $this->get_field_id('labels'); ?>">Show Labels</label></p>
 
 <ul class="social_accounts">
-	<?php foreach ($social_accounts as $site => $id) :
-		$icon = plugins_url('social_icons_widget/icons/small/'.$id.'.jpg', '');
-		if ( @getimagesize($icon) ) { $image = '<img class="site_icon" src="'.$icon.'" alt="'.$site.'" height="16" width="16" />'; }
-		else { $image = ''; }
-	?>
-		<li><?php echo $image; ?> <label for="<?php echo $this->get_field_id($id); ?>"><?php echo $site; ?>:</label>
-			<input class="widefat" type="text" id="<?php echo $this->get_field_id($id); ?>" name="<?php echo $this->get_field_name($id); ?>" value="<?php echo attribute_escape($data[$id]); ?>" /></li>
+	<?php foreach ($social_accounts as $site => $id) : ?>
+		<li><label for="<?php echo $this->get_field_id($id); ?>" class="<?php echo $id; ?>"><?php echo $site; ?>:</label>
+			<input class="widefat" type="text" id="<?php echo $this->get_field_id($id); ?>" name="<?php echo $this->get_field_name($id); ?>" value="<?php echo esc_attr($data[$id]); ?>" /></li>
 	<?php endforeach; ?>
 </ul>
 

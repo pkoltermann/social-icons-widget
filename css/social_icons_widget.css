@@ -19,6 +19,7 @@
 }
 
 .social-icons-widget ul.show-labels li img {
+	float:left;
 	margin-right:10px;
 	vertical-align:middle;
 }
