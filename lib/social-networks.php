@@ -17,11 +17,13 @@
 	global $social_accounts;
 	$social_accounts = array(
 		'Behance' => 'behance',
+		'Bitbucket' => 'bitbucket',
 		'Dribbble' => 'dribbble',
 		'Facebook' => 'facebook',
 		'Flickr' => 'flickr',
 		'Forrst' => 'forrst',
 		'Foursquare' => 'foursquare',
+        'GitHub' => 'github',
 		'Google+' => 'googleplus',
 		'Instagram' => 'instagram',
 		'Klout' => 'klout',

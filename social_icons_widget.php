@@ -31,12 +31,14 @@ class Social_Icons_Widget extends WP_Widget {
 		global $social_accounts;
 		$social_accounts = array(
 			'Behance' => 'behance',
+			'Bitbucket' => 'bitbucket',
 			'Dribbble' => 'dribbble',
 			'Facebook' => 'facebook',
 			'Flickr' => 'flickr',
 			'Forrst' => 'forrst',
 			'Foursquare' => 'foursquare',
 			'Google+' => 'googleplus',
+            'GitHub' => 'github',
 			'Instagram' => 'instagram',
 			'Klout' => 'klout',
 			'LinkedIn' => 'linkedin',

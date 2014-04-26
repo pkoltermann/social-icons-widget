@@ -16,12 +16,14 @@
 
 /* Icons for admin widget */
 .social_icons_widget .behance { background-image:url('../icons/small/behance.jpg'); }
+.social_icons_widget .bitbucket { background-image:url('../icons/small/bitbucket.jpg'); }
 .social_icons_widget .dribbble { background-image:url('../icons/small/dribbble.jpg'); }
 .social_icons_widget .facebook { background-image:url('../icons/small/facebook.png'); }
 .social_icons_widget .flickr { background-image:url('../icons/small/flickr.jpg'); }
 .social_icons_widget .forrst { background-image:url('../icons/small/forrst.jpg'); }
 .social_icons_widget .foursquare { background-image:url('../icons/small/foursquare.jpg'); }
 .social_icons_widget .googleplus { background-image:url('../icons/small/googleplus.jpg'); }
+.social_icons_widget .github { background-image:url('../icons/small/github.jpg'); }
 .social_icons_widget .instagram { background-image:url('../icons/small/instagram.jpg'); }
 .social_icons_widget .klout { background-image:url('../icons/small/klout.jpg'); }
 .social_icons_widget .linkedin { background-image:url('../icons/small/linkedin.jpg'); }
